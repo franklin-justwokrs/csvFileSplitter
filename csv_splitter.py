@@ -27,7 +27,7 @@ def split(filehandler, delimiter=',', row_limit=10000,
          output_path,
          output_name_template  % current_piece
     )
-    current_out_writer = csv.writer(open(current_out_path, 'w'))
+    current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
     current_limit = row_limit
     if keep_headers:
         headers = reader.next()
@@ -40,7 +40,7 @@ def split(filehandler, delimiter=',', row_limit=10000,
                output_path,
                output_name_template  % current_piece
             )
-            current_out_writer = csv.writer(open(current_out_path, 'w'))
+            current_out_writer = csv.writer(open(current_out_path, 'w'), delimiter=delimiter)
             if keep_headers:
                 current_out_writer.writerow(headers)
         current_out_writer.writerow(row)
