@@ -17,7 +17,7 @@ def split(filehandler, delimiter=',', row_limit=10000,
     Example usage:
     
         >> from toolbox import csv_splitter;
-        >> csv_splitter.split(csv.splitter(open('/home/ben/Desktop/lasd/2009-01-02 [00.00.00].csv', 'r')));
+        >> csv_splitter.split(csv.splitter(open('/home/ben/input.csv', 'r')));
     
     """
     import csv
