@@ -9,7 +9,7 @@ def split(filehandler, delimiter=',', row_limit=10000,
 
     Arguments:
 
-        `row_limit`: The number of rows you want in each output file
+        `row_limit`: The number of rows you want in each output file. 10,000 by default.
         `output_name_template`: A %s-style template for the numbered output files.
         `output_path`: Where to stick the output files
         `keep_headers`: Whether or not to print the headers in each output file.
