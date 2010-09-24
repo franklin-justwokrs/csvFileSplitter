@@ -24,6 +24,7 @@ def split(filehandler, delimiter=',', row_limit=10000,
     reader = csv.reader(filehandler, delimiter=delimiter)
     current_piece = 1
     current_out_path = os.path.join(
+         output_path,
          output_name_template  % current_piece
     )
     current_out_writer = csv.writer(open(current_out_path, 'w'))
@@ -36,6 +37,7 @@ def split(filehandler, delimiter=',', row_limit=10000,
             current_piece += 1
             current_limit = row_limit * current_piece
             current_out_path = os.path.join(
+               output_path,
                output_name_template  % current_piece
             )
             current_out_writer = csv.writer(open(current_out_path, 'w'))
